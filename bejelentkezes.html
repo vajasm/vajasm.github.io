@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en, hu">
+<head>
+ <style></style>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="stylesheet" type="text/css" href="/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/fontawesome-free-5.14.0-web/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RetroBurger</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center" >
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html"><i class="fas fa-home"></i></a>
+        </li>
+    </ul>
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="hamburgerek.html"><i class="fas fa-hamburger"></i></a>
+        </li>
+    </ul>
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="bejelentkezes.html"><i class="fas fa-sign-in-alt"></i></a>
+        </li>
+    </ul>
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="rolunk.html"><i class="fas fa-store"></i></a>
+        </li>
+    </ul>
+</nav>
+<div class="container-fluid"><h1 class="text-center">Hamburger rendelés</h1></div>
+<div class="container">
+<div class="form-group">
+    <form>
+        <label for="hambi">Hamburger</label>
+        <select name="hambi" class="custom-select">
+          <option value="semmi" selected>---Válassz hamburgert---</option>
+          <option value="3500">Hagyományos burger</option>
+          <option value="1900">Szalonnás burger</option>
+        </select>
+          <br>
+          <label for="mennyiseg">Mennyiség</label><br>
+          <input type="number" id="mennyiseg" name="mennyiseg" max="10" min="1" value="1"><br><br>
+        <button type="button" class="btn btn-primary">Elküld</button>
+        
+      </form>
+</div>
+</div>
+</body>
+</html>
