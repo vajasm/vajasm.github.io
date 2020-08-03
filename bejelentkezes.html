@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en, hu">
-<head>
- <style></style>
-  <link rel="stylesheet" type="text/css" href="/style.css">
-  <link rel="stylesheet" type="text/css" href="/bootstrap-4.5.0-dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/fontawesome-free-5.14.0-web/css/all.min.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RetroBurger</title>
-</head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/fontawesome-free-5.14.0-web/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <style></style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Próbaburger</title>
+    </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center" >
     <ul class="navbar-nav">
@@ -38,15 +38,45 @@
     <form>
         <label for="hambi">Hamburger</label>
         <select name="hambi" class="custom-select">
-          <option value="semmi" selected>---Válassz hamburgert---</option>
-          <option value="3500">Hagyományos burger</option>
-          <option value="1900">Szalonnás burger</option>
+          <option id="valassz" value="semmi" selected>---Válassz hamburgert---</option>
         </select>
           <br>
           <label for="mennyiseg">Mennyiség</label><br>
-          <input type="number" id="mennyiseg" name="mennyiseg" max="10" min="1" value="1"><br><br>
-        <button type="button" class="btn btn-primary">Elküld</button>
+          <input type="number" name="mennyiseg" max="10" min="1" value="5"><br><br>
+        <button id="elkuld" onclick="mennyisegLekerdez()" type="button" class="btn btn-primary">Elküld</button>
         
+        <p id="kiir"></p>
+
+        <script>
+
+            let ar = 1900;
+            let hambik =   [{id:"buri1",ára:2000, neve:""},{neve:"buri2",ára:2000},{neve:"buri3",ára:2000},{neve:"buri5",ára:2000}
+               ] 
+            ;
+            document.querySelector("option[name='hagyomanyosBurger']").id=hambik[0].neve;
+            document.querySelector("option[name='hagyomanyosBurger']").id=hambik[1].neve;
+           
+           function hambiOptions() {
+            var i
+            for (i = 0; i < hambik.length; i++) {
+            console.log(hambik[i].neve, hambik[i].ára);
+
+            };
+           }
+
+           
+    
+function mennyisegLekerdez ()  {
+let x = document.querySelector("input[name='mennyiseg']").value
+let z = x * ar;
+console.log(z)
+document.getElementById("kiir").innerHTML=hambik;
+}
+
+
+        </script>
+
+
       </form>
 </div>
 </div>

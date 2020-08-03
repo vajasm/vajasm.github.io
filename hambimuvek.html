@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hambiművek</title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/fontawesome-free-5.14.0-web/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <script src="/script.js"></script>
+        <style>
+        </style>
+</head>
+<body>
+    <div class="container-fluid p-3 bg-dark text-white"><h1 class="text-center">Üdvözöllek a HambiMűvek v0.1 változatában</h1></div>
+    <div class="row">
+        <div class="col-6 p-5 text-dark" style="background-color: lavender;" >
+            <h2 class="text-center">Itt lehet hamburgert hozzáadni</h2>
+            <div class="row">
+                <div class="col-6 p-1 form-group">
+                    <label for="text">Hamburger neve:</label>
+                    <input type="text" class="form-control" placeholder="Hambi neve" id="nev">
+                    <label for="text">Hamburger ára:</label>
+                    <input type="number" class="form-control" placeholder="Hambi ára" id="ar" min="100" max="10000" step="100">
+                    <br>
+                    <button class="btn btn-success" onclick="rendelesFelvetel();">Mehet a rendelés! <i class="fas fa-arrow-circle-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 p-5 text-dark" style="background-color:lightsalmon">
+            <h2 class="text-center">Itt lehet hamburgert rendelni</h2>
+<div class="row">
+    <div class="table-borderless text-center">
+        <table class="text-center" id="rendeles">
+        <thead>
+            <tr>
+                <th>Hamburger neve</th>
+                <th>Hamburger ára</th>
+                <th>További műveletek</th>
+            </tr>
+        </thead>
+    </table>
+    </div>
+</div>
+    </div>
+
+
+
+
+</body>
+</html>
